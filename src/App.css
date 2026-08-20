@@ -64,3 +64,34 @@ li {
   margin-bottom: 10px;
   line-height: 1.6;
 }
+
+/* Add this at the end of App.css */
+
+/* Better card styling */
+div[style*="backgroundColor: #e8f5e9"] {
+  border: 2px solid #4caf50;
+  box-shadow: 0 2px 8px rgba(76, 175, 80, 0.2);
+}
+
+div[style*="backgroundColor: #ffebee"] {
+  border: 2px solid #e53935;
+  box-shadow: 0 2px 8px rgba(229, 57, 53, 0.2);
+}
+
+/* Better input buttons */
+button[style*="backgroundColor: #f0f0f0"] {
+  transition: all 0.3s;
+}
+
+button[style*="backgroundColor: #f0f0f0"]:hover {
+  background-color: #e0e0e0 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Progress bar */
+div[style*="fontSize: 12px"] {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 2px solid #eee;
+}
