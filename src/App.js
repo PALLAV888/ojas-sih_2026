@@ -1,23 +1,37 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import DoshaQuiz from './components/DoshaQuiz';
+import RecommendationsList from './components/RecommendationsList';
 import './App.css';
 
 function App() {
+  const [selectedDosha, setSelectedDosha] = useState(null);
+  const [showQuiz, setShowQuiz] = useState(true);
+
+  const handleDoshaSelected = (dosha) => {
+    setSelectedDosha(dosha);
+    setShowQuiz(false);
+  };
+
+  const handleReset = () => {
+    setSelectedDosha(null);
+    setShowQuiz(true);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div style={{ padding: '20px', textAlign: 'center', borderBottom: '1px solid #eee' }}>
+        <h1>🌿 OJAS</h1>
+        <p>Know Your Dosha. Eat Right. Feel Better.</p>
+      </div>
+
+      {showQuiz ? (
+        <DoshaQuiz onDoshaSelected={handleDoshaSelected} />
+      ) : (
+        <RecommendationsList 
+          dosha={selectedDosha} 
+          onReset={handleReset}
+        />
+      )}
     </div>
   );
 }
