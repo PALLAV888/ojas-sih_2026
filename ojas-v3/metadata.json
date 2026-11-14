@@ -1,0 +1,6 @@
+{
+  "name": "OJAS",
+  "description": "Cloud-based Ayurvedic patient case-taking and clinical practice management platform for India's Ministry of AYUSH and Smart India Hackathon 2026.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
